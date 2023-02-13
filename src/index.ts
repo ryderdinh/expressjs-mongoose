@@ -12,8 +12,10 @@ app.use(express.text({ type: 'text/html' }))
 app.get('/', async (req, res) => {
 	res.json({ message: 'Please visit /countries to view all the countries' })
 })
-app.post('/', function (req, res) {
-	res.redirect(`http://localhost:3000/#/store/orders/${orderId}?stt=success`)
+app.post('/:id', function (req, res) {
+	res.redirect(
+		`http://localhost:3000/#/store/orders/${req.param.id}?stt=success`
+	)
 })
 
 app.use('/countries', countryRoutes)

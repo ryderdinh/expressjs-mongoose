@@ -13,8 +13,7 @@ app.get('/', async (req, res) => {
 	res.json({ message: 'Please visit /countries to view all the countries' })
 })
 app.post('/', function (req, res) {
-	console.log(req)
-	res.redirect(`https://chat.openai.com/chat`)
+	res.redirect(`http://localhost:3000/#/store/orders/${orderId}?stt=success`)
 })
 
 app.use('/countries', countryRoutes)

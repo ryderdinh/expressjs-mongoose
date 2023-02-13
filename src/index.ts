@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
 })
 app.post('/:id', function (req, res) {
 	res.redirect(
-		`http://localhost:3000/#/store/orders/${req.param.id}?stt=success`
+		`http://localhost:3000/#/store/orders/${req.params.id}?stt=success`
 	)
 })
 
